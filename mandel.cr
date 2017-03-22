@@ -1,3 +1,5 @@
+# Mandelbrot sample from Crystal source
+
 def print_density(d)
   if d > 8
     print ' '
