@@ -25,11 +25,12 @@ def dynamic
 end
 
 timestamp, mandel, dlfile = dynamic
+Fun.run(mandel)
 loop do
-  Fun.run(mandel)
-  sleep 1
   if timestamp != get_timestamp
     LibC.dlclose(dlfile)
     timestamp, mandel, dlfile = dynamic
+    Fun.run(mandel)
   end
+  sleep 1
 end
