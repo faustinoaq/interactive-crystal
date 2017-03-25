@@ -37,6 +37,13 @@ def mandel(realstart, imagstart, realmag, imagmag)
   mandelhelp realstart, realstart + realmag*78, realmag, imagstart, imagstart + imagmag*40, imagmag
 end
 
+# `fun` allow communication between header.so and main
+# Other `fun` with arguments could be like:
+# ```
+# fun mandel(realstart : Float64, imagstart : Float64, realmag : Float64, imagmag : Float64) : Void
+#   mandel(realstart, imagstart, realmag, imagmag)
+# end
+# ```
 fun mandel : Void
   mandel -2.3, -1.3, 0.05, 0.07
 end
