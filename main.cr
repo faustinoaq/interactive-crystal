@@ -11,7 +11,7 @@ end
 FILE = "./mandel.so"
 
 def get_timestamp
-  File.stat(FILE).mtime.to_s("%Y%m%d%H%M%S")
+  File.info(FILE).modification_time.to_s("%Y%m%d%H%M%S")
 end
 
 # Load dynamic library
